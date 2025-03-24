@@ -1,0 +1,331 @@
+{
+  "info": {
+    "_postman_id": "a2ed22ad-4323-4d82-b245-1db4f216ea15",
+    "name": "PhantomMask",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "223515"
+  },
+  "item": [
+    {
+      "name": "transaction",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pharmacyName\": \"First Care Rx\",\r\n    \"maskName\": \"Second Smile (blue) (10 per pack)\",\r\n    \"userName\": \"Lester Arnold\",\r\n    \"num\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/transaction",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "transaction"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "queryOpeningHour",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"\",\r\n    \"time\": \"09:00:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/queryOpeningHour",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "queryOpeningHour"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "queryOpeningHour-Week",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"\",\r\n    \"time\": \"Mon\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/queryOpeningHour",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "queryOpeningHour"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "queryMask",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"First Care Rx\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/queryMask",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "queryMask"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "queryMaskByPrice",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"highPrice\": \"30\",\r\n    \"lowPrice\": \"0\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/queryMaskByPrice",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "queryMaskByPrice"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "initData",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"First Care Rx\",\r\n    \"highPrice\": \"30\",\r\n    \"lowPrice\": \"0\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/initData",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "initData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "queryHighTransactionAmountUser",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"startTime\": \"2021-01-20\",\r\n    \"endTime\": \"2021-01-21\",\r\n    \"row\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/queryHighTransactionAmountUser",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "queryHighTransactionAmountUser"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "queryPurchaseMaskByDate",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"startTime\": \"2021-01-20\",\r\n    \"endTime\": \"2021-01-21\",\r\n    \"row\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/queryPurchaseMaskByDate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "queryPurchaseMaskByDate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "searchMask",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"First Care Rx\",\r\n    \"time\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/search/mask",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "search",
+            "mask"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "searchPharmacy",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"First Care Rx\",\r\n    \"time\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/search/pharmacy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "search",
+            "pharmacy"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
